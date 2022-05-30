@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>{{actionBtn}} Coin Form</h1>
+
+
+<div mat-dialog-content>
+    <form [formGroup]="coinForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Coin Name</mat-label>
+            <input formControlName="name" matInput placeholder="Placeholder">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Acronym</mat-label>
+            <input formControlName="acronym" matInput placeholder="Placeholder">
+        </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addCoin()">{{actionBtn}}</button>
+
+</div>
